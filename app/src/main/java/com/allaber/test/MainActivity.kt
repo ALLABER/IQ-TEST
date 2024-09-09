@@ -4,44 +4,62 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.allaber.test.ui.theme.IQTESTTheme
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
+import com.allaber.test.core.navigation.NavigationScreens
+import com.allaber.test.feature.age.presentation.screen.AgeScreen
+import com.allaber.test.feature.instruction.presentation.screen.InstructionScreen
+import com.allaber.test.feature.main.presentation.screen.MainScreen
+import com.allaber.test.feature.result.presentation.screen.ResultScreen
+import com.allaber.test.feature.test.presentation.screen.TestScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            IQTESTTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
-            }
+            Application()
         }
     }
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
+fun Application() {
+    val navController = rememberNavController()
+    Scaffold(
+        content = { padding ->
+            Box(modifier = Modifier.padding(padding)) {
+                NavHost(
+                    navController = navController,
+                    startDestination = NavigationScreens.MainScreen().route
+                ) {
+                    composable(
+                        NavigationScreens.MainScreen().route
+                    ) { MainScreen(navController) }
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    IQTESTTheme {
-        Greeting("Android")
-    }
+                    composable(
+                        NavigationScreens.InstructionScreen().route
+                    ) { InstructionScreen(navController) }
+
+                    composable(
+                        NavigationScreens.AgeScreen().route
+                    ) { AgeScreen(navController) }
+
+                    composable(
+                        NavigationScreens.TestScreen().route
+                    ) { TestScreen(navController) }
+
+                    composable(
+                        NavigationScreens.ResultScreen().route
+                    ) { ResultScreen(navController) }
+                }
+            }
+        }
+    )
 }
