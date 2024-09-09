@@ -1,7 +1,8 @@
 package com.allaber.test.feature.result.presentation.screen
 
 import androidx.compose.runtime.Composable
+import androidx.navigation.NavController
 
 @Composable
-fun ResultScreen() {
+fun ResultScreen(navController: NavController) {
 }
