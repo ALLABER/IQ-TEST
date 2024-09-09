@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">IQ-TEST</string>
+    <string name="app_name">IQ-TECT</string>
+    <string name="start_testing">Начать тестирование</string>
 </resources>
