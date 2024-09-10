@@ -4,11 +4,11 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavController
-import com.allaber.test.core.navigation.NavigationScreens
+import com.allaber.test.core.navigation.Routes
 
 @Composable
 fun TestScreen(navController: NavController) {
-    Button(onClick = { navController.navigate(NavigationScreens.ResultScreen().route) }) {
+    Button(onClick = { navController.navigate(Routes.ResultScreen.route) }) {
         Text(text = "Go to result screen")
     }
 }

@@ -10,7 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.navigation.NavController
 import com.allaber.test.R
-import com.allaber.test.core.navigation.NavigationScreens
+import com.allaber.test.core.navigation.Routes
 
 @Composable
 fun MainScreen(navController: NavController) {
@@ -18,7 +18,7 @@ fun MainScreen(navController: NavController) {
         modifier = Modifier.fillMaxSize()
     ) {
         TextButton(
-            onClick = { navController.navigate(NavigationScreens.InstructionScreen().route) },
+            onClick = { navController.navigate(Routes.InstructionScreen.route) },
             modifier = Modifier.align(Alignment.Center)
         ) {
             Text(text = stringResource(id = R.string.start_testing))

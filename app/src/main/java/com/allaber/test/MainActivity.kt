@@ -12,7 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.allaber.test.core.navigation.NavigationScreens
+import com.allaber.test.core.navigation.Routes
 import com.allaber.test.feature.age.presentation.screen.AgeScreen
 import com.allaber.test.feature.instruction.presentation.screen.InstructionScreen
 import com.allaber.test.feature.main.presentation.screen.MainScreen
@@ -37,26 +37,26 @@ fun Application() {
             Box(modifier = Modifier.padding(padding)) {
                 NavHost(
                     navController = navController,
-                    startDestination = NavigationScreens.MainScreen().route
+                    startDestination = Routes.MainScreen.route
                 ) {
                     composable(
-                        NavigationScreens.MainScreen().route
+                        Routes.MainScreen.route
                     ) { MainScreen(navController) }
 
                     composable(
-                        NavigationScreens.InstructionScreen().route
+                        Routes.InstructionScreen.route
                     ) { InstructionScreen(navController) }
 
                     composable(
-                        NavigationScreens.AgeScreen().route
+                        Routes.AgeScreen.route
                     ) { AgeScreen(navController) }
 
                     composable(
-                        NavigationScreens.TestScreen().route
+                        Routes.TestScreen.route
                     ) { TestScreen(navController) }
 
                     composable(
-                        NavigationScreens.ResultScreen().route
+                        Routes.ResultScreen.route
                     ) { ResultScreen(navController) }
                 }
             }
