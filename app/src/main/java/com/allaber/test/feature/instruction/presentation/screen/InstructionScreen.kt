@@ -15,7 +15,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.allaber.test.R
-import com.allaber.test.core.navigation.NavigationScreens
+import com.allaber.test.core.navigation.Routes
 
 @Composable
 fun InstructionScreen(navController: NavController) {
@@ -29,7 +29,7 @@ fun InstructionScreen(navController: NavController) {
         }
 
         Button(
-            onClick = { navController.navigate(NavigationScreens.AgeScreen().route) },
+            onClick = { navController.navigate(Routes.AgeScreen.route) },
             modifier = Modifier
                 .align(Alignment.BottomEnd)
         ) {
