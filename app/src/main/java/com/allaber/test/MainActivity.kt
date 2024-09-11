@@ -18,7 +18,9 @@ import com.allaber.test.feature.instruction.presentation.screen.InstructionScree
 import com.allaber.test.feature.main.presentation.screen.MainScreen
 import com.allaber.test.feature.result.presentation.screen.ResultScreen
 import com.allaber.test.feature.test.presentation.screen.TestScreen
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
