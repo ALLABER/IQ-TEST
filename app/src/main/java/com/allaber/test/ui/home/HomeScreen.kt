@@ -1,4 +1,4 @@
-package com.allaber.test.feature.main.presentation.screen
+package com.allaber.test.ui.home
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -10,10 +10,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.navigation.NavController
 import com.allaber.test.R
-import com.allaber.test.core.navigation.Routes
+import com.allaber.test.ui.Routes
 
 @Composable
-fun MainScreen(navController: NavController) {
+fun HomeScreen(navController: NavController) {
     Box(
         modifier = Modifier.fillMaxSize()
     ) {

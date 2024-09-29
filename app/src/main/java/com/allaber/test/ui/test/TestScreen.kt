@@ -1,4 +1,4 @@
-package com.allaber.test.feature.test.presentation.screen
+package com.allaber.test.ui.test
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -11,9 +11,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
-import com.allaber.test.core.navigation.Routes
-import com.allaber.test.feature.test.presentation.viewModel.TestViewModel
-import com.allaber.test.ui.components.ImageFromAssets
+import com.allaber.test.components.ImageFromAssets
+import com.allaber.test.ui.Routes
 
 @Composable
 fun TestScreen(navController: NavController, viewModel: TestViewModel = hiltViewModel()) {

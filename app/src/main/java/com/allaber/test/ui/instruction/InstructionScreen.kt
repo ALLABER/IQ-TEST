@@ -1,4 +1,4 @@
-package com.allaber.test.feature.instruction.presentation.screen
+package com.allaber.test.ui.instruction
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -15,7 +15,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.allaber.test.R
-import com.allaber.test.core.navigation.Routes
+import com.allaber.test.ui.Routes
 
 @Composable
 fun InstructionScreen(navController: NavController) {

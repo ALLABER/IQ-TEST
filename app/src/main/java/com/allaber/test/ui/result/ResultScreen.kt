@@ -1,4 +1,4 @@
-package com.allaber.test.feature.result.presentation.screen
+package com.allaber.test.ui.result
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavController
