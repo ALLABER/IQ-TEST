@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Button
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -17,20 +18,23 @@ import com.allaber.test.components.ImageFromAssets
 fun TestScreen(
     windowSizeClass: WindowSizeClass,
     navigateToResultScreen: () -> Unit,
-    viewModel: TestViewModel = hiltViewModel()
+    viewModel: TestViewModel = hiltViewModel(),
+    modifier: Modifier = Modifier
 ) {
     val questions = viewModel.questions
 
-    Box(modifier = Modifier.fillMaxSize()) {
-        Column {
-            LazyColumn {
-                items(questions.value) { item ->
-                    ImageFromAssets(item.imageName)
+    Surface(modifier.fillMaxSize()) {
+        Box(modifier = Modifier.fillMaxSize()) {
+            Column {
+                LazyColumn {
+                    items(questions.value) { item ->
+                        ImageFromAssets(item.imageName)
+                    }
                 }
-            }
 
-            Button(onClick = { navigateToResultScreen() }) {
-                Text(text = "Go to result screen")
+                Button(onClick = { navigateToResultScreen() }) {
+                    Text(text = "Go to result screen")
+                }
             }
         }
     }
