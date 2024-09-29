@@ -10,12 +10,15 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.hilt.navigation.compose.hiltViewModel
-import androidx.navigation.NavController
+import androidx.window.core.layout.WindowSizeClass
 import com.allaber.test.components.ImageFromAssets
-import com.allaber.test.ui.Routes
 
 @Composable
-fun TestScreen(navController: NavController, viewModel: TestViewModel = hiltViewModel()) {
+fun TestScreen(
+    windowSizeClass: WindowSizeClass,
+    navigateToResultScreen: () -> Unit,
+    viewModel: TestViewModel = hiltViewModel()
+) {
     val questions = viewModel.questions
 
     Box(modifier = Modifier.fillMaxSize()) {
@@ -26,7 +29,7 @@ fun TestScreen(navController: NavController, viewModel: TestViewModel = hiltView
                 }
             }
 
-            Button(onClick = { navController.navigate(Routes.ResultScreen.route) }) {
+            Button(onClick = { navigateToResultScreen() }) {
                 Text(text = "Go to result screen")
             }
         }

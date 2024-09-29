@@ -8,17 +8,16 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import androidx.navigation.NavController
+import androidx.window.core.layout.WindowSizeClass
 import com.allaber.test.R
-import com.allaber.test.ui.Routes
 
 @Composable
-fun HomeScreen(navController: NavController) {
+fun HomeScreen(windowSizeClass: WindowSizeClass, navigateToInstructionScreen: () -> Unit) {
     Box(
         modifier = Modifier.fillMaxSize()
     ) {
         TextButton(
-            onClick = { navController.navigate(Routes.InstructionScreen.route) },
+            onClick = { navigateToInstructionScreen() },
             modifier = Modifier.align(Alignment.Center)
         ) {
             Text(text = stringResource(id = R.string.start_testing))

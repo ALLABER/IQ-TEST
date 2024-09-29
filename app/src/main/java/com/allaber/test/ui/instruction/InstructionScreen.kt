@@ -13,12 +13,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavController
+import androidx.window.core.layout.WindowSizeClass
 import com.allaber.test.R
-import com.allaber.test.ui.Routes
 
 @Composable
-fun InstructionScreen(navController: NavController) {
+fun InstructionScreen(windowSizeClass: WindowSizeClass, navigateToAgeScreen: () -> Unit) {
     Box(
         modifier = Modifier.fillMaxSize().padding(16.dp)
     ) {
@@ -29,7 +28,7 @@ fun InstructionScreen(navController: NavController) {
         }
 
         Button(
-            onClick = { navController.navigate(Routes.AgeScreen.route) },
+            onClick = { navigateToAgeScreen() },
             modifier = Modifier
                 .align(Alignment.BottomEnd)
         ) {
