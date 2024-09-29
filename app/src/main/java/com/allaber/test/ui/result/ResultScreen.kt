@@ -1,8 +1,8 @@
 package com.allaber.test.ui.result
 
 import androidx.compose.runtime.Composable
-import androidx.navigation.NavController
+import androidx.window.core.layout.WindowSizeClass
 
 @Composable
-fun ResultScreen(navController: NavController) {
+fun ResultScreen(windowSizeClass: WindowSizeClass) {
 }
