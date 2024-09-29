@@ -1,7 +1,7 @@
-package com.allaber.test.core.navigation
+package com.allaber.test.ui
 
 sealed class Routes(val route: String) {
-    data object MainScreen : Routes(route = "mainScreen")
+    data object HomeScreen : Routes(route = "homeScreen")
     data object InstructionScreen : Routes(route = "instructionScreen")
     data object AgeScreen : Routes(route = "ageScreen")
     data object TestScreen : Routes(route = "testScreen")

@@ -1,4 +1,4 @@
-package com.allaber.test.ui.components
+package com.allaber.test.components
 
 import android.content.Context
 import android.graphics.BitmapFactory

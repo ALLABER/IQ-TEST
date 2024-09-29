@@ -1,10 +1,10 @@
-package com.allaber.test.feature.age.presentation.screen
+package com.allaber.test.ui.age
 
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavController
-import com.allaber.test.core.navigation.Routes
+import com.allaber.test.ui.Routes
 
 @Composable
 fun AgeScreen(navController: NavController) {

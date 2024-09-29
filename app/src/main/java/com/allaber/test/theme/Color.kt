@@ -1,4 +1,4 @@
-package com.allaber.test.ui.theme
+package com.allaber.test.theme
 
 import androidx.compose.ui.graphics.Color
 

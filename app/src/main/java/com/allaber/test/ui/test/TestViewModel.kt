@@ -1,4 +1,4 @@
-package com.allaber.test.feature.test.presentation.viewModel
+package com.allaber.test.ui.test
 
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
