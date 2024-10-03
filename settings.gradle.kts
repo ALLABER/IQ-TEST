@@ -21,3 +21,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "IQ-TEST"
 include(":app")
+include(":core:domain")
+include(":core:data")
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
