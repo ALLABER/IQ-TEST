@@ -1,9 +1,9 @@
-package com.allaber.test.core.data.converters
+package ru.allaber.converters
 
 import androidx.room.TypeConverter
-import com.allaber.test.core.data.model.AnswerModel
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import ru.allaber.model.AnswerModel
 
 class Converters {
 

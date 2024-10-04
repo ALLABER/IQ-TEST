@@ -1,11 +1,11 @@
-package com.allaber.test.core.data.database
+package ru.allaber.database
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
-import com.allaber.test.core.data.converters.Converters
-import com.allaber.test.core.data.model.AnswerModel
-import com.allaber.test.core.data.model.QuestionModel
+import ru.allaber.converters.Converters
+import ru.allaber.model.AnswerModel
+import ru.allaber.model.QuestionModel
 
 @Database(
     entities = [QuestionModel::class, AnswerModel::class],

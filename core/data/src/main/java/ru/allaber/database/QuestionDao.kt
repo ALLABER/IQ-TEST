@@ -1,8 +1,8 @@
-package com.allaber.test.core.data.database
+package ru.allaber.database
 
 import androidx.room.Dao
 import androidx.room.Query
-import com.allaber.test.core.data.model.QuestionModel
+import ru.allaber.model.QuestionModel
 
 @Dao
 interface QuestionDao {
