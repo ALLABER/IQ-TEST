@@ -1,19 +1,19 @@
-package com.allaber.test.di
+package ru.allaber.di
 
 import android.content.Context
 import androidx.room.Room
-import com.allaber.test.core.data.database.Database
-import com.allaber.test.core.data.database.QuestionDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
+import ru.allaber.database.Database
+import ru.allaber.database.QuestionDao
 
 @Module
 @InstallIn(SingletonComponent::class)
-object AppModule {
+object DataModule {
 
     @Provides
     @Singleton

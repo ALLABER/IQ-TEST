@@ -4,11 +4,12 @@ plugins {
 }
 
 android {
-    namespace = "ru.allaber.domain"
+    namespace = "ru.allaber.utils"
     compileSdk = 34
 
     defaultConfig {
         minSdk = 24
+
         consumerProguardFiles("consumer-rules.pro")
     }
 
@@ -31,5 +32,5 @@ android {
 }
 
 dependencies {
-    implementation(libs.hilt.android)
+    implementation(libs.androidx.core.ktx)
 }

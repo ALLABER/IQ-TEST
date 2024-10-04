@@ -3,17 +3,17 @@ package com.allaber.test.ui.test
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.allaber.test.core.data.database.Database
-import com.allaber.test.core.data.model.QuestionModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 import kotlinx.coroutines.launch
+import ru.allaber.domain.model.Question
+import ru.allaber.domain.usecase.GetAllQuestionsUseCase
 
 @HiltViewModel
 class TestViewModel @Inject constructor(
-    private val database: Database
+    private val getAllQuestionsUseCase: GetAllQuestionsUseCase
 ) : ViewModel() {
-    val questions = mutableStateOf(emptyList<QuestionModel>())
+    val questions = mutableStateOf(emptyList<Question>())
 
     init {
         getAllQuestions()
@@ -21,7 +21,7 @@ class TestViewModel @Inject constructor(
 
     private fun getAllQuestions() {
         viewModelScope.launch {
-            questions.value = database.questionDao().getAllQuestions()
+            questions.value = getAllQuestionsUseCase()
         }
     }
 }

@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.hilt)
+    alias(libs.plugins.ksp)
 }
 
 android {
@@ -31,4 +33,13 @@ android {
 }
 dependencies {
     implementation(projects.core.domain)
+    implementation(projects.utils)
+
+    implementation(libs.gson)
+
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.compiler)
+
+    implementation(libs.room.ktx)
+    ksp(libs.room.compiler)
 }

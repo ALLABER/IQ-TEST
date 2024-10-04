@@ -1,3 +1,7 @@
 package ru.allaber.domain.repository
 
-interface TestRepository
+import ru.allaber.domain.model.Question
+
+interface TestRepository {
+    suspend fun getAllQuestions(): List<Question>
+}

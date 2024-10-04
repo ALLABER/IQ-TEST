@@ -1,12 +1,13 @@
-package com.allaber.test.core.data.model
+package ru.allaber.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "answers")
-data class AnswerModel(
+@Entity(tableName = "questions")
+data class QuestionModel(
     @PrimaryKey(autoGenerate = true)
     val id: Int? = null,
     val imageName: String,
-    val isCorrect: Boolean
+    val points: Int,
+    val answers: List<AnswerModel>
 )
