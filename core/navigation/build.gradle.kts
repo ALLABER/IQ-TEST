@@ -4,12 +4,13 @@ plugins {
 }
 
 android {
-    namespace = "ru.allaber.ageentry.navigation"
+    namespace = "ru.allaber.navigation"
     compileSdk = 34
 
     defaultConfig {
         minSdk = 24
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -18,7 +19,5 @@ android {
         jvmTarget = "1.8"
     }
 }
-
 dependencies {
-    implementation(projects.core.navigation)
 }
