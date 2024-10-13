@@ -3,19 +3,24 @@ package com.allaber.test.ui
 import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import ru.allaber.ResultRoute
+import ru.allaber.ageentry.AgeEntryRoute
 import ru.allaber.ageentry.ui.AgeEntryScreen
+import ru.allaber.home.HomeRoute
 import ru.allaber.home.ui.HomeScreen
+import ru.allaber.instructions.InstructionsRoute
 import ru.allaber.instructions.ui.InstructionScreen
 import ru.allaber.result.ui.ResultScreen
+import ru.allaber.test.TestRoute
 import ru.allaber.test.ui.TestScreen
 
 @Composable
 fun TestApp(appState: TestAppState = rememberTestAppState()) {
     NavHost(
         navController = appState.navController,
-        startDestination = Routes.HomeScreen.route
+        startDestination = HomeRoute.toString()
     ) {
-        composable(Routes.HomeScreen.route) {
+        composable(HomeRoute.toString()) {
             HomeScreen(
                 navigateToInstructionScreen = {
                     appState.navigateToInstructionScreen()
@@ -24,7 +29,7 @@ fun TestApp(appState: TestAppState = rememberTestAppState()) {
         }
 
         composable(
-            Routes.InstructionScreen.route
+            InstructionsRoute.toString()
         ) {
             InstructionScreen(
                 navigateToAgeScreen = {
@@ -34,7 +39,7 @@ fun TestApp(appState: TestAppState = rememberTestAppState()) {
         }
 
         composable(
-            Routes.AgeScreen.route
+            AgeEntryRoute.toString()
         ) {
             AgeEntryScreen(
                 navigateToTestScreen = {
@@ -44,7 +49,7 @@ fun TestApp(appState: TestAppState = rememberTestAppState()) {
         }
 
         composable(
-            Routes.TestScreen.route
+            TestRoute.toString()
         ) {
             TestScreen(
                 navigateToResultScreen = {
@@ -54,7 +59,7 @@ fun TestApp(appState: TestAppState = rememberTestAppState()) {
         }
 
         composable(
-            Routes.ResultScreen.route
+            ResultRoute.toString()
         ) {
             ResultScreen()
         }

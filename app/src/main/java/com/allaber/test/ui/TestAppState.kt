@@ -6,6 +6,10 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
+import ru.allaber.ResultRoute
+import ru.allaber.ageentry.AgeEntryRoute
+import ru.allaber.instructions.InstructionsRoute
+import ru.allaber.test.TestRoute
 
 @Composable
 fun rememberTestAppState(
@@ -21,19 +25,19 @@ class TestAppState(
 ) {
 
     fun navigateToInstructionScreen() {
-        navController.navigate(Routes.InstructionScreen.route)
+        navController.navigate(InstructionsRoute.toString())
     }
 
     fun navigateToAgeScreen() {
-        navController.navigate(Routes.AgeScreen.route)
+        navController.navigate(AgeEntryRoute.toString())
     }
 
     fun navigateToTestScreen() {
-        navController.navigate(Routes.TestScreen.route)
+        navController.navigate(TestRoute.toString())
     }
 
     fun navigateToResultScreen() {
-        navController.navigate(Routes.ResultScreen.route)
+        navController.navigate(ResultRoute.toString())
     }
 
     fun navigateBack() {
