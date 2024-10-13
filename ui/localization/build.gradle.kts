@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "ru.allaber.utils"
+    namespace = "ru.allaber.localization"
     compileSdk = 34
 
     defaultConfig {
@@ -18,8 +18,4 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-}
-
-dependencies {
-    implementation(libs.androidx.core.ktx)
 }
