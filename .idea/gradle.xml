@@ -14,6 +14,26 @@
             <option value="$PROJECT_DIR$/core" />
             <option value="$PROJECT_DIR$/core/data" />
             <option value="$PROJECT_DIR$/core/domain" />
+            <option value="$PROJECT_DIR$/feature" />
+            <option value="$PROJECT_DIR$/feature/age-entry" />
+            <option value="$PROJECT_DIR$/feature/age-entry/navigation" />
+            <option value="$PROJECT_DIR$/feature/age-entry/ui" />
+            <option value="$PROJECT_DIR$/feature/home" />
+            <option value="$PROJECT_DIR$/feature/home/navigation" />
+            <option value="$PROJECT_DIR$/feature/home/ui" />
+            <option value="$PROJECT_DIR$/feature/instructions" />
+            <option value="$PROJECT_DIR$/feature/instructions/navigation" />
+            <option value="$PROJECT_DIR$/feature/instructions/ui" />
+            <option value="$PROJECT_DIR$/feature/result" />
+            <option value="$PROJECT_DIR$/feature/result/navigation" />
+            <option value="$PROJECT_DIR$/feature/result/ui" />
+            <option value="$PROJECT_DIR$/feature/test" />
+            <option value="$PROJECT_DIR$/feature/test/navigation" />
+            <option value="$PROJECT_DIR$/feature/test/ui" />
+            <option value="$PROJECT_DIR$/ui" />
+            <option value="$PROJECT_DIR$/ui/assets" />
+            <option value="$PROJECT_DIR$/ui/components" />
+            <option value="$PROJECT_DIR$/ui/localization" />
             <option value="$PROJECT_DIR$/utils" />
           </set>
         </option>

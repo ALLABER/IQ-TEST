@@ -2,9 +2,33 @@
 <project version="4">
   <component name="JavaProjectCodeInsightSettings">
     <excluded-names>
+<!--      Modifier-->
       <name>java.nio.file.WatchEvent</name>
       <name>com.google.errorprone.annotations.Modifier</name>
       <name>java.lang.reflect.Modifier</name>
+<!--      Surface-->
+      <name>android.view.Surface</name>
+      <name>androidx.core.content.pm.ShortcutInfoCompat</name>
+<!--      Alignment-->
+      <name>android.widget.GridLayout</name>
+      <name>android.text.Layout</name>
+<!--        Button-->
+      <name>android.widget.Button</name>
+      <name>androidx.compose.ui.semantics.Role.Companion.Button</name>
+<!--        Text-->
+      <name>org.w3c.dom.Text</name>
+      <name>androidx.compose.foundation.content.MediaType.Companion.Text</name>
+      <name>androidx.compose.ui.input.pointer.PointerIcon.Companion.Text</name>
+      <name>androidx.compose.ui.semantics.SemanticsProperties.Text</name>
+      <name>androidx.compose.ui.text.input.KeyboardType.Companion.Text</name>
+<!--        Inject-->
+      <name>jakarta.inject.Inject</name>
+<!--        Image-->
+      <name>android.media.Image</name>
+      <name>androidx.compose.foundation.content.MediaType.Companion.Image</name>
+      <name>androidx.compose.ui.semantics.Role.Companion.Image</name>
+
+
     </excluded-names>
   </component>
 </project>

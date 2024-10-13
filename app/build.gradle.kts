@@ -51,9 +51,28 @@ android {
 }
 
 dependencies {
+    // Core
     implementation(projects.core.domain)
     implementation(projects.core.data)
+
+    // Utils
     implementation(projects.utils)
+
+    // Ui
+    implementation(projects.ui.localization)
+    implementation(projects.ui.assets)
+
+    // Features
+    implementation(projects.feature.home.navigation)
+    implementation(projects.feature.home.ui)
+    implementation(projects.feature.instructions.navigation)
+    implementation(projects.feature.instructions.ui)
+    implementation(projects.feature.ageEntry.navigation)
+    implementation(projects.feature.ageEntry.ui)
+    implementation(projects.feature.test.navigation)
+    implementation(projects.feature.test.ui)
+    implementation(projects.feature.result.navigation)
+    implementation(projects.feature.result.ui)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -69,7 +88,6 @@ dependencies {
 
     implementation(libs.hilt.navigation.compose)
     implementation(libs.hilt.android)
-    implementation(libs.androidx.adaptive.android)
     ksp(libs.hilt.compiler)
 
     implementation(libs.room.runtime)

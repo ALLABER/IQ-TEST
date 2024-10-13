@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "ru.allaber.utils"
+    namespace = "ru.allaber.home.navigation"
     compileSdk = 34
 
     defaultConfig {
@@ -21,5 +21,4 @@ android {
 }
 
 dependencies {
-    implementation(libs.androidx.core.ktx)
 }
